@@ -1,10 +1,15 @@
 import React from "react";
 import "./styles/App.css";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Shop from "./components/Shop";
 
 const App = () => {
   return (
     <div className="App">
-      <h1> App </h1>
+      <Nav />
+      <About />
+      <Shop />
     </div>
   );
 };
