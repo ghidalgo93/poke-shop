@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/poke-shop/static/css/main.ce1535ed.chunk.css",
+    "main.js": "/poke-shop/static/js/main.f2483335.chunk.js",
+    "main.js.map": "/poke-shop/static/js/main.f2483335.chunk.js.map",
+    "runtime-main.js": "/poke-shop/static/js/runtime-main.61e64d2b.js",
+    "runtime-main.js.map": "/poke-shop/static/js/runtime-main.61e64d2b.js.map",
+    "static/js/2.19be15fd.chunk.js": "/poke-shop/static/js/2.19be15fd.chunk.js",
+    "static/js/2.19be15fd.chunk.js.map": "/poke-shop/static/js/2.19be15fd.chunk.js.map",
+    "index.html": "/poke-shop/index.html",
+    "static/css/main.ce1535ed.chunk.css.map": "/poke-shop/static/css/main.ce1535ed.chunk.css.map",
+    "static/js/2.19be15fd.chunk.js.LICENSE.txt": "/poke-shop/static/js/2.19be15fd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61e64d2b.js",
+    "static/js/2.19be15fd.chunk.js",
+    "static/css/main.ce1535ed.chunk.css",
+    "static/js/main.f2483335.chunk.js"
+  ]
+}
