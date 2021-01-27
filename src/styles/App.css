@@ -19,6 +19,11 @@ input {
 .logo {
   height: 5em;
 }
+
+.text {
+  width: 50%;
+}
+
 .add-btn:hover {
   color: green;
 }
@@ -38,6 +43,12 @@ input {
 .react-link {
   color: white;
   text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop-container {
