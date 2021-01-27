@@ -19,12 +19,12 @@ const App = () => {
       <div className="App">
         <Nav cart={cart} />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route exact path="/shop">
+          <Route path="/fallguys-shop/" exact component={Home} />
+          <Route path="/fallguys-shop/about" component={About} />
+          <Route exact path="/fallguys-shop/shop">
             <Shop handleCartAdd={handleCartAdd} />
           </Route>
-          <Route path="/cart">
+          <Route path="/fallguys-shop/cart">
             <Cart handleCartAdd={handleCartAdd} cart={cart} />
           </Route>
         </Switch>
