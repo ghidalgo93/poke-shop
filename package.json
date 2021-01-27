@@ -2,7 +2,7 @@
   "name": "fallguys-shop",
   "version": "0.1.0",
   "private": true,
-	"homepage": "http://ghidalgo93.github.io/poke-shop", 
+	"homepage": "http://ghidalgo93.github.io/fallguys-shop", 
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
