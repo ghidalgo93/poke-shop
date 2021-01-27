@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles/App.css";
 import ItemCard from "./ItemCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Pokedex from "pokedex-promise-v2";
-import { Link } from "react-router-dom";
 const P = new Pokedex();
 
 const Shop = (props) => {
@@ -24,13 +23,7 @@ const Shop = (props) => {
   };
 
   const itemCards = items.map((item) => (
-    <ItemCard
-      key={item.id}
-      img={item.sprites.front_default}
-      name={item.name}
-      cost={item.base_experience}
-      handleCartAdd={props.handleCartAdd}
-    />
+    <ItemCard key={item.id} item={item} handleCartAdd={props.handleCartAdd} />
   ));
 
   return <div className={"shop-container"}>{itemCards}</div>;

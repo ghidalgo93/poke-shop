@@ -7,12 +7,23 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  max-height: 10vh;
   background-color: #1e426b;
   color: white;
 }
 
+input {
+  width: 3em;
+}
+
+.logo {
+  height: 5em;
+}
 .add-btn:hover {
   color: green;
+}
+.remove-btn:hover {
+  color: red;
 }
 
 .nav-links {

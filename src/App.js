@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Shop from "./components/Shop";
-import ItemDetail from "./components/ItemDetail";
+import Cart from "./components/Cart";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const handleCardAdd = (item) => {
-    console.log(item);
+
+  const handleCartAdd = (item, amount) => {
+    setCart([...cart, { item: item, amount: amount }]);
   };
 
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Nav cart={cart} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route exact path="/shop">
-            <Shop handleCardAdd={handleCardAdd} />
+            <Shop handleCartAdd={handleCartAdd} />
           </Route>
-          <Route path="/shop/:id" component={ItemDetail} />
+          <Route path="/cart">
+            <Cart handleCartAdd={handleCartAdd} cart={cart} />
+          </Route>
         </Switch>
       </div>
     </Router>

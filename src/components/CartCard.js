@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
-const ItemCard = (props) => {
+const CartCard = (props) => {
   const [num, setNum] = useState(0);
 
   const handleAmountChange = (e) => {
     setNum(e.target.value);
   };
-  const handleAdd = () => {
-    if (num > 0) {
-      props.handleCartAdd(props.item, num);
-    }
-    setNum(0);
-  };
+
+  // const handleUpdate = () => {};
+  // const handleRemove = () => {};
+
+  useEffect(() => {
+    setNum(props.num);
+  }, []);
 
   const content = (
     <div className={"card"}>
@@ -31,8 +32,13 @@ const ItemCard = (props) => {
         />
         <FontAwesomeIcon
           icon={faPlusCircle}
-          onClick={handleAdd}
+          // onClick={handleUpdate}
           className={"add-btn"}
+        />
+        <FontAwesomeIcon
+          icon={faTimesCircle}
+          // onClick={handleRemove}
+          className={"remove-btn"}
         />
       </div>
     </div>
@@ -41,4 +47,4 @@ const ItemCard = (props) => {
   return content;
 };
 
-export default ItemCard;
+export default CartCard;
