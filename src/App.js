@@ -15,16 +15,16 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Nav cart={cart} />
         <Switch>
-          <Route path="/fallguys-shop/" exact component={Home} />
-          <Route path="/fallguys-shop/about" component={About} />
-          <Route exact path="/fallguys-shop/shop">
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route exact path="/shop">
             <Shop handleCartAdd={handleCartAdd} />
           </Route>
-          <Route path="/fallguys-shop/cart">
+          <Route path="/cart">
             <Cart handleCartAdd={handleCartAdd} cart={cart} />
           </Route>
         </Switch>
